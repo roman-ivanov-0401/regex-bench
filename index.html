@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regex-bench · ReDoS и производительность</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <p class="meta">regex-bench / ИТМО, Веб-программирование, 06.10.2026</p>
+        <h1>ReDoS: как одна регулярка кладёт поток</h1>
+        <p class="lead">
+          <strong>ReDoS</strong> (Regular expression Denial of Service) — атака на
+          вычислительную сложность. Уязвимый паттерн на специально подобранном входе
+          уходит в <em>catastrophic backtracking</em>: число перебираемых вариантов
+          растёт экспоненциально с длиной строки. Ниже — сравнение небезопасного и
+          безопасного выражения, бенчмарк и детектор уязвимостей.
+        </p>
+        <p class="lead">
+          Проблема не теоретическая: в 2016 году из-за регулярки для обрезки
+          пробелов на 34 минуты лёг Stack Overflow<sup><a href="#fn1" id="ref1">1</a></sup>,
+          в 2019 — одно правило WAF на 27 минут уронило сеть
+          Cloudflare<sup><a href="#fn2" id="ref2">2</a></sup>.
+        </p>
+<pre class="formula"><span class="c">// один и тот же вход: "aaaa…a!"</span>
+/^(a+)+$/.test(input)   <span class="c">// O(2^n) — небезопасно</span>
+/^a+$/.test(input)      <span class="c">// O(n)   — безопасно</span></pre>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- 2. Песочница -->
+      <section id="sandbox" class="card">
+        <h2>1. Песочница</h2>
+        <p class="muted">
+          Выражение исполняется в изолированном <strong>Web Worker</strong>, поэтому
+          даже «зависший» матчинг не блокирует страницу: по таймауту воркер
+          принудительно завершается.
+        </p>
+        <div class="controls">
+          <label>
+            Пара паттернов
+            <select id="pattern-select"></select>
+          </label>
+          <label>
+            Длина входа n: <output id="len-value">25</output>
+            <input id="len-range" type="range" min="1" max="60" value="25" />
+          </label>
+          <label>
+            Таймаут, мс
+            <input id="timeout-input" type="number" value="2000" min="100" step="100" />
+          </label>
+        </div>
+        <div class="pattern-preview">
+          <div><span class="tag unsafe">unsafe</span> <code id="unsafe-src"></code></div>
+          <div><span class="tag safe">safe</span> <code id="safe-src"></code></div>
+          <div><span class="tag input">вход</span> <code id="attack-preview"></code></div>
+        </div>
+        <button id="run-single" class="primary">Запустить на длине n</button>
+        <div id="single-result" class="result-grid"></div>
+      </section>
+
+      <!-- 3. Бенчмарк + график -->
+      <section id="benchmark" class="card">
+        <h2>2. Бенчмарк: время vs длина входа</h2>
+        <p class="muted">
+          Серия замеров по растущей длине входа для обоих паттернов. Обе оси
+          логарифмические. Экспоненциальным паттернам хватает нескольких десятков
+          символов: у <code>(a+)+</code> время удваивается с каждым символом, и
+          кривая уходит почти вертикально вверх. Полиномиальным нужны тысячи, и
+          их кривая — прямая с наклоном 2 или 3, по степени многочлена. Максимальные
+          длины подставляются под выбранную пару. Точки, упёршиеся в таймаут,
+          отмечены крестиками.
+        </p>
+        <div class="controls">
+          <label>
+            Макс. длина (unsafe)
+            <input id="bench-max-unsafe" type="number" value="34" min="5" step="1" />
+          </label>
+          <label>
+            Макс. длина (safe)
+            <input id="bench-max-safe" type="number" value="50000" min="5" step="1" />
+          </label>
+          <label>
+            Повторов на точку
+            <input id="bench-repeats" type="number" value="5" min="1" step="1" />
+          </label>
+          <button id="run-bench" class="primary">Запустить бенчмарк</button>
+        </div>
+        <div id="bench-progress" class="muted"></div>
+        <div class="chart-box"><canvas id="bench-chart"></canvas></div>
+        <p id="bench-source" class="caption"></p>
+      </section>
+
+      <!-- 4. Демо блокировки UI -->
+      <section id="blocking" class="card">
+        <h2>3. Блокировка UI: main thread против воркера</h2>
+        <p class="muted">
+          Слева уязвимый паттерн запускается прямо в main thread — анимация
+          замирает, страница не отвечает. Справа — в воркере: спиннер продолжает
+          крутиться, UI жив.
+        </p>
+        <div class="blocking-grid">
+          <div>
+            <div class="spinner" id="spinner-main"></div>
+            <button id="block-main" class="danger">Запустить в main thread</button>
+            <p class="muted small" id="block-main-status"></p>
+          </div>
+          <div>
+            <div class="spinner" id="spinner-worker"></div>
+            <button id="block-worker" class="primary">Запустить в воркере</button>
+            <p class="muted small" id="block-worker-status"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Детектор -->
+      <section id="detector" class="card">
+        <h2>4. Детектор уязвимостей (recheck)</h2>
+        <p class="muted">
+          Статический анализ паттерна библиотекой <code>recheck</code> прямо в
+          браузере. Возвращает вердикт, оценку сложности и, если паттерн уязвим,
+          атакующую строку.
+        </p>
+        <div class="controls">
+          <label class="grow">
+            Регулярное выражение (без слэшей)
+            <input id="detect-source" type="text" value="^(a+)+$" />
+          </label>
+          <label>
+            Флаги
+            <input id="detect-flags" type="text" value="" placeholder="напр. i, g" />
+          </label>
+          <button id="run-detect" class="primary">Проверить</button>
+        </div>
+        <div id="detect-result" class="result-grid"></div>
+      </section>
+
+      <section id="runs" class="card">
+        <h2>5. Прогоны в трёх средах</h2>
+        <p class="muted">
+          Те же 11 пар, те же длины и тот же таймаут прогнаны трижды: в Node через
+          <code>worker_threads</code>, в изолированном headless Chromium через
+          Playwright и в том же Chromium внутри Docker-контейнера с лимитами
+          ресурсов. Ниже — снимок последнего запуска <code>npm run bench:all</code>.
+        </p>
+        <ul id="runs-findings" class="findings"></ul>
+
+        <h3>Среды</h3>
+        <div class="table-wrap"><table id="runs-envs" class="data envs"></table></div>
+
+        <h3>Сравнение по парам</h3>
+        <p class="muted small">
+          Для каждой пары взята наибольшая длина n, на которой unsafe уложился в
+          таймаут во всех трёх средах. «safe» и «разница» — по Node; «оп/с» —
+          пропускная способность safe-паттерна на n = 5000 по tinybench.
+        </p>
+        <div class="table-wrap"><table id="runs-pairs" class="data"></table></div>
+
+        <h3>Выбранная пара во всех средах</h3>
+        <div class="chart-box"><canvas id="runs-chart"></canvas></div>
+        <p id="runs-caption" class="caption"></p>
+      </section>
+
+      <section id="takeaways" class="card">
+        <h2>6. Как защищаться</h2>
+        <ul class="takeaways">
+          <li>Избегайте вложенных квантификаторов и перекрывающихся альтернаций: <code>(a+)+</code>, <code>(a|a)*</code>, <code>(.*)*</code>.</li>
+          <li>Используйте атомарные группы / possessive-квантификаторы в движках, где они есть.</li>
+          <li>Выполняйте матчинг с таймаутом в изолированном потоке (как в этой демо).</li>
+          <li>Прогоняйте паттерны через линтер: <code>recheck</code> и его ESLint-плагин.</li>
+          <li>Для недоверенного ввода берите движок без backtracking — <code>RE2</code>.</li>
+        </ul>
+      </section>
+
+      <section id="notes" class="notes">
+        <h2>Примечания</h2>
+        <ol>
+          <li id="fn1">
+            Stack Overflow, 20 июля 2016. В посте оказалось около 20 000 пробелов
+            подряд, а на главной для него вызывалась регулярка обрезки
+            <code>^[\s\u200c]+|[\s\u200c]+$</code>. Главная перестала отвечать
+            вовремя, балансировщик счёл серверы мёртвыми (по ней шёл health check)
+            и вывел их из ротации. Любопытно, что сложность здесь квадратичная,
+            <code>O(n²)</code>, а не экспоненциальная — хватило и этого.
+            Регулярку заменили на <code>substring</code>.
+            <a href="https://web.archive.org/web/20160720200842/https://stackstatus.net/post/147710624694/outage-postmortem-july-20-2016">Постмортем</a>.
+            <a href="#ref1" class="back" aria-label="Назад к тексту">↑</a>
+          </li>
+          <li id="fn2">
+            Cloudflare, 2 июля 2019. Новое правило WAF Managed Rules содержало
+            фрагмент <code>.*(?:.*=.*)</code>; правило выкатили на всю сеть сразу,
+            и CPU, обслуживающие HTTP/HTTPS, ушли почти в 100% по всему миру.
+            Пользователи видели 502, трафик падал до 82%. Защиту от прожорливых
+            регулярок незадолго до этого случайно удалили при рефакторинге.
+            <a href="https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/">Разбор в блоге Cloudflare</a>.
+            <a href="#ref2" class="back" aria-label="Назад к тексту">↑</a>
+          </li>
+          <li>
+            <a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS">OWASP: Regular expression Denial of Service</a>
+            — описание атаки и типичных «злых» паттернов.
+          </li>
+          <li>
+            <a href="https://makenowjust-labs.github.io/recheck/">recheck</a>
+            — документация детектора, который используется в разделе 4.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="wrap muted small">
+      regex-bench — учебная демонстрация ReDoS. Замеры воспроизводятся в
+      изолированном Chromium (Playwright) внутри Docker с лимитами ресурсов.
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

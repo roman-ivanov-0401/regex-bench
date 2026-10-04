@@ -1,0 +1,17 @@
+services:
+  bench:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    # Лимиты ресурсов — изоляция и воспроизводимость замеров.
+    cpus: "1.0"
+    mem_limit: 1g
+    memswap_limit: 1g
+    pids_limit: 256
+    environment:
+      BENCH_ENV: docker
+    # Результаты прогона попадают на хост.
+    volumes:
+      - ../results:/app/results
+    # Playwright/Chromium в контейнере стабильнее с увеличенным /dev/shm.
+    shm_size: "512m"

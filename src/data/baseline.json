@@ -1,0 +1,3595 @@
+{
+  "timestamp": "2026-10-04T14:43:12.423Z",
+  "timeoutMs": 2000,
+  "env": {
+    "cpu": "Apple M1 Pro",
+    "node": "v26.8.2",
+    "platform": "darwin-arm64"
+  },
+  "series": [
+    {
+      "pair": "nested-plus",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0002920000000017353
+    },
+    {
+      "pair": "nested-plus",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0004160000000013042
+    },
+    {
+      "pair": "nested-plus",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.00041699999997035775
+    },
+    {
+      "pair": "nested-plus",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0007499999999822649
+    },
+    {
+      "pair": "nested-plus",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0020000000000095497
+    },
+    {
+      "pair": "nested-plus",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0036659999999528736
+    },
+    {
+      "pair": "nested-plus",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.014250000000004093
+    },
+    {
+      "pair": "nested-plus",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.05091599999997243
+    },
+    {
+      "pair": "nested-plus",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.10133299999995415
+    },
+    {
+      "pair": "nested-plus",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.40904199999999946
+    },
+    {
+      "pair": "nested-plus",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.69825000000003
+    },
+    {
+      "pair": "nested-plus",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 6.807916999999975
+    },
+    {
+      "pair": "nested-plus",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 13.326291999999967
+    },
+    {
+      "pair": "nested-plus",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 55.529042000000004
+    },
+    {
+      "pair": "nested-plus",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 214.94229199999995
+    },
+    {
+      "pair": "nested-plus",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 425.171875
+    },
+    {
+      "pair": "nested-plus",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1721.4372500000002
+    },
+    {
+      "pair": "nested-plus",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "nested-plus",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "nested-plus",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "nested-plus",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033399999938410474
+    },
+    {
+      "pair": "nested-plus",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "nested-plus",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "nested-plus",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000029359944
+    },
+    {
+      "pair": "nested-plus",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003750000005311449
+    },
+    {
+      "pair": "nested-plus",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "nested-plus",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000029359944
+    },
+    {
+      "pair": "nested-plus",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0012079999996785773
+    },
+    {
+      "pair": "nested-plus",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "nested-plus",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999985919567
+    },
+    {
+      "pair": "nested-plus",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000001977314
+    },
+    {
+      "pair": "nested-plus",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999995257822
+    },
+    {
+      "pair": "nested-plus",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000001977314
+    },
+    {
+      "pair": "nested-plus",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000001977314
+    },
+    {
+      "pair": "nested-plus",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999995257822
+    },
+    {
+      "pair": "nested-plus",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000001977314
+    },
+    {
+      "pair": "nested-plus",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "nested-plus",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045899999986431794
+    },
+    {
+      "pair": "nested-plus",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "nested-plus",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000077381264
+    },
+    {
+      "pair": "nested-plus",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006249999996725819
+    },
+    {
+      "pair": "nested-plus",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0009580000005371403
+    },
+    {
+      "pair": "nested-plus",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0018749999999272404
+    },
+    {
+      "pair": "nested-plus",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004124999999476131
+    },
+    {
+      "pair": "nested-plus",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.009500000000116415
+    },
+    {
+      "pair": "nested-plus",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.024875000000065484
+    },
+    {
+      "pair": "nested-plus",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05724999999983993
+    },
+    {
+      "pair": "nested-plus",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.13991700000042329
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.00041599999985919567
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0005000000001018634
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0009169999993901001
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0027079999999841675
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.005000000000109139
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.01912499999980355
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0722089999999298
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.1522079999995185
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.6011250000001382
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 2.381333000000268
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 9.15429099999983
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 18.623083000000406
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 75.17070800000056
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 295.4637910000001
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 595.9806250000001
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033399999847461004
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000029359944
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000029359944
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003750000014406396
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000011072261
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000011072261
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045899999895482324
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006670000002486631
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000001018634
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000001018634
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000077381264
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006249999987630872
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0010000000002037268
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001916999999593827
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00408400000014808
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.009416999999302789
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.022957999999562162
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05645799999911105
+    },
+    {
+      "pair": "overlap-alt",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.14008400000057009
+    },
+    {
+      "pair": "star-star",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "star-star",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "star-star",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0005419999997684499
+    },
+    {
+      "pair": "star-star",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0011660000000119908
+    },
+    {
+      "pair": "star-star",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0036670000008598436
+    },
+    {
+      "pair": "star-star",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.006250000000363798
+    },
+    {
+      "pair": "star-star",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.02449999999953434
+    },
+    {
+      "pair": "star-star",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.09629099999983737
+    },
+    {
+      "pair": "star-star",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.19020799999998417
+    },
+    {
+      "pair": "star-star",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.7700840000015887
+    },
+    {
+      "pair": "star-star",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 3.2178750000002765
+    },
+    {
+      "pair": "star-star",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 12.686917000000903
+    },
+    {
+      "pair": "star-star",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 25.819041000000652
+    },
+    {
+      "pair": "star-star",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 101.36974999999984
+    },
+    {
+      "pair": "star-star",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 401.4118330000001
+    },
+    {
+      "pair": "star-star",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 810.5764579999995
+    },
+    {
+      "pair": "star-star",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "star-star",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "star-star",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "star-star",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "star-star",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0002920000006270129
+    },
+    {
+      "pair": "star-star",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0002920000006270129
+    },
+    {
+      "pair": "star-star",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "star-star",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000029359944
+    },
+    {
+      "pair": "star-star",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003750000014406396
+    },
+    {
+      "pair": "star-star",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999992882367
+    },
+    {
+      "pair": "star-star",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "star-star",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999992882367
+    },
+    {
+      "pair": "star-star",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000011072261
+    },
+    {
+      "pair": "star-star",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999992882367
+    },
+    {
+      "pair": "star-star",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004170000011072261
+    },
+    {
+      "pair": "star-star",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "star-star",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005409999994299142
+    },
+    {
+      "pair": "star-star",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "star-star",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999992882367
+    },
+    {
+      "pair": "star-star",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041600000076869037
+    },
+    {
+      "pair": "star-star",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "star-star",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000001018634
+    },
+    {
+      "pair": "star-star",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000004352769
+    },
+    {
+      "pair": "star-star",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000077381264
+    },
+    {
+      "pair": "star-star",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006250000005820766
+    },
+    {
+      "pair": "star-star",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0010419999998703133
+    },
+    {
+      "pair": "star-star",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001958000000740867
+    },
+    {
+      "pair": "star-star",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004249999999956344
+    },
+    {
+      "pair": "star-star",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00999999999839929
+    },
+    {
+      "pair": "star-star",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.024207999998907326
+    },
+    {
+      "pair": "star-star",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05966700000135461
+    },
+    {
+      "pair": "star-star",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.14883300000292365
+    },
+    {
+      "pair": "digits-group",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "digits-group",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0004580000022542663
+    },
+    {
+      "pair": "digits-group",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0007919999989098869
+    },
+    {
+      "pair": "digits-group",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0020000000004074536
+    },
+    {
+      "pair": "digits-group",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.003541999998560641
+    },
+    {
+      "pair": "digits-group",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.014208000000508036
+    },
+    {
+      "pair": "digits-group",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.050917000000481494
+    },
+    {
+      "pair": "digits-group",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.10495799999989686
+    },
+    {
+      "pair": "digits-group",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.40545900000142865
+    },
+    {
+      "pair": "digits-group",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.6673330000012356
+    },
+    {
+      "pair": "digits-group",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 6.772209000002476
+    },
+    {
+      "pair": "digits-group",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 13.417584000002535
+    },
+    {
+      "pair": "digits-group",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 53.35754200000156
+    },
+    {
+      "pair": "digits-group",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 213.35712500000227
+    },
+    {
+      "pair": "digits-group",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 428.4517500000002
+    },
+    {
+      "pair": "digits-group",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1707.6347920000007
+    },
+    {
+      "pair": "digits-group",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "digits-group",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "digits-group",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "digits-group",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0002920000006270129
+    },
+    {
+      "pair": "digits-group",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "digits-group",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "digits-group",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000022542663
+    },
+    {
+      "pair": "digits-group",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "digits-group",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "digits-group",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "digits-group",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "digits-group",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "digits-group",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999894970097
+    },
+    {
+      "pair": "digits-group",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "digits-group",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999992882367
+    },
+    {
+      "pair": "digits-group",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045899999895482324
+    },
+    {
+      "pair": "digits-group",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "digits-group",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000499999998282874
+    },
+    {
+      "pair": "digits-group",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "digits-group",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006250000005820766
+    },
+    {
+      "pair": "digits-group",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0010000000002037268
+    },
+    {
+      "pair": "digits-group",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0019170000014128163
+    },
+    {
+      "pair": "digits-group",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004041000000142958
+    },
+    {
+      "pair": "digits-group",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.009750000001076842
+    },
+    {
+      "pair": "digits-group",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.02295899999808171
+    },
+    {
+      "pair": "digits-group",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05666700000074343
+    },
+    {
+      "pair": "digits-group",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.14412499999889405
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.000499999998282874
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.001082999999198364
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.003416999999899417
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.006500000003143214
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.024916999998822575
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.09624999999869033
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.19829199999730918
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.758125000000291
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 3.065707999998267
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 12.190583999999944
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 24.23512500000288
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 94.68708300000071
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 382.1722080000036
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 758.8890409999985
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0008749999979045242
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004160000025876798
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999894970097
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004160000025876798
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999996216502
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999894970097
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045899999895482324
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000499999998282874
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999986162875
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999894970097
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0006670000002486631
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0010000000002037268
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0018329999984416645
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0040829999998095445
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.009667000002082204
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.023209000002680114
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05774999999994179
+    },
+    {
+      "pair": "word-or-digit",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.14187500000116415
+    },
+    {
+      "pair": "fibonacci",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "fibonacci",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003329999999550637
+    },
+    {
+      "pair": "fibonacci",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.000499999998282874
+    },
+    {
+      "pair": "fibonacci",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0007499999992433004
+    },
+    {
+      "pair": "fibonacci",
+      "n": 11,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0012909999968542252
+    },
+    {
+      "pair": "fibonacci",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.004541999998764368
+    },
+    {
+      "pair": "fibonacci",
+      "n": 16,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.011291999999230029
+    },
+    {
+      "pair": "fibonacci",
+      "n": 18,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.02808300000106101
+    },
+    {
+      "pair": "fibonacci",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.11725000000296859
+    },
+    {
+      "pair": "fibonacci",
+      "n": 23,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.31524999999965075
+    },
+    {
+      "pair": "fibonacci",
+      "n": 25,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.8020830000023125
+    },
+    {
+      "pair": "fibonacci",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 2.1537089999983436
+    },
+    {
+      "pair": "fibonacci",
+      "n": 30,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 9.016875000001164
+    },
+    {
+      "pair": "fibonacci",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 23.60212500000125
+    },
+    {
+      "pair": "fibonacci",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 62.171542000000045
+    },
+    {
+      "pair": "fibonacci",
+      "n": 37,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 262.93704199999775
+    },
+    {
+      "pair": "fibonacci",
+      "n": 39,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 684.1883749999979
+    },
+    {
+      "pair": "fibonacci",
+      "n": 41,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1805.1028750000005
+    },
+    {
+      "pair": "fibonacci",
+      "n": 44,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "fibonacci",
+      "n": 46,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "fibonacci",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "fibonacci",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "fibonacci",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "fibonacci",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "fibonacci",
+      "n": 11,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "fibonacci",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "fibonacci",
+      "n": 16,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "fibonacci",
+      "n": 18,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "fibonacci",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "fibonacci",
+      "n": 23,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "fibonacci",
+      "n": 25,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "fibonacci",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000022542663
+    },
+    {
+      "pair": "fibonacci",
+      "n": 30,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004999999946448952
+    },
+    {
+      "pair": "fibonacci",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "fibonacci",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "fibonacci",
+      "n": 37,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "fibonacci",
+      "n": 39,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005840000012540258
+    },
+    {
+      "pair": "fibonacci",
+      "n": 41,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005420000015874393
+    },
+    {
+      "pair": "fibonacci",
+      "n": 44,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "fibonacci",
+      "n": 46,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004999999946448952
+    },
+    {
+      "pair": "fibonacci",
+      "n": 110,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007079999995767139
+    },
+    {
+      "pair": "fibonacci",
+      "n": 264,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0011659999945550226
+    },
+    {
+      "pair": "fibonacci",
+      "n": 633,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.002166999998735264
+    },
+    {
+      "pair": "fibonacci",
+      "n": 1517,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004625000001396984
+    },
+    {
+      "pair": "fibonacci",
+      "n": 3634,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.010583999996015336
+    },
+    {
+      "pair": "fibonacci",
+      "n": 8708,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.026665999997931067
+    },
+    {
+      "pair": "fibonacci",
+      "n": 20866,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.058792000003450084
+    },
+    {
+      "pair": "fibonacci",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.14008299999841256
+    },
+    {
+      "pair": "words",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003330000035930425
+    },
+    {
+      "pair": "words",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "words",
+      "n": 5,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0005420000015874393
+    },
+    {
+      "pair": "words",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0007499999992433004
+    },
+    {
+      "pair": "words",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.002082999999402091
+    },
+    {
+      "pair": "words",
+      "n": 10,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0036660000041592866
+    },
+    {
+      "pair": "words",
+      "n": 12,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.013500000000931323
+    },
+    {
+      "pair": "words",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.05083300000114832
+    },
+    {
+      "pair": "words",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.10904199999640696
+    },
+    {
+      "pair": "words",
+      "n": 17,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.4778749999968568
+    },
+    {
+      "pair": "words",
+      "n": 19,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.7071670000004815
+    },
+    {
+      "pair": "words",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 6.838500000005297
+    },
+    {
+      "pair": "words",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 13.773499999995693
+    },
+    {
+      "pair": "words",
+      "n": 24,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 54.44212499999412
+    },
+    {
+      "pair": "words",
+      "n": 26,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 218.966290999997
+    },
+    {
+      "pair": "words",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 437.1465420000022
+    },
+    {
+      "pair": "words",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1751.1796659999964
+    },
+    {
+      "pair": "words",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "words",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "words",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "words",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0002919999969890341
+    },
+    {
+      "pair": "words",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "words",
+      "n": 5,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "words",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "words",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000022542663
+    },
+    {
+      "pair": "words",
+      "n": 10,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "words",
+      "n": 12,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045899999531684443
+    },
+    {
+      "pair": "words",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005830000009154901
+    },
+    {
+      "pair": "words",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "words",
+      "n": 17,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "words",
+      "n": 19,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005410000012489036
+    },
+    {
+      "pair": "words",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "words",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005410000012489036
+    },
+    {
+      "pair": "words",
+      "n": 24,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005420000015874393
+    },
+    {
+      "pair": "words",
+      "n": 26,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "words",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005829999936395325
+    },
+    {
+      "pair": "words",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005419999943114817
+    },
+    {
+      "pair": "words",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005830000009154901
+    },
+    {
+      "pair": "words",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000540999993972946
+    },
+    {
+      "pair": "words",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007079999995767139
+    },
+    {
+      "pair": "words",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0008749999979045242
+    },
+    {
+      "pair": "words",
+      "n": 211,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0017089999964809977
+    },
+    {
+      "pair": "words",
+      "n": 524,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.003541999998560641
+    },
+    {
+      "pair": "words",
+      "n": 1304,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.007874999995692633
+    },
+    {
+      "pair": "words",
+      "n": 3245,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.018916999993962236
+    },
+    {
+      "pair": "words",
+      "n": 8074,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.046167000000423286
+    },
+    {
+      "pair": "words",
+      "n": 20092,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.11729200000263518
+    },
+    {
+      "pair": "words",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.3054169999959413
+    },
+    {
+      "pair": "email",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0002919999969890341
+    },
+    {
+      "pair": "email",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003330000035930425
+    },
+    {
+      "pair": "email",
+      "n": 6,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003330000035930425
+    },
+    {
+      "pair": "email",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "email",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "email",
+      "n": 11,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0010840000031748787
+    },
+    {
+      "pair": "email",
+      "n": 13,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0030839999963063747
+    },
+    {
+      "pair": "email",
+      "n": 15,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.01112499999726424
+    },
+    {
+      "pair": "email",
+      "n": 16,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.024291000001539942
+    },
+    {
+      "pair": "email",
+      "n": 18,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.08866699999634875
+    },
+    {
+      "pair": "email",
+      "n": 20,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.3435830000016722
+    },
+    {
+      "pair": "email",
+      "n": 22,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.3957919999957085
+    },
+    {
+      "pair": "email",
+      "n": 23,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 2.826290999997582
+    },
+    {
+      "pair": "email",
+      "n": 25,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 11.56300000000192
+    },
+    {
+      "pair": "email",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 45.98704099999304
+    },
+    {
+      "pair": "email",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 182.14824999999837
+    },
+    {
+      "pair": "email",
+      "n": 31,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 737.6693749999977
+    },
+    {
+      "pair": "email",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1458.0667499999981
+    },
+    {
+      "pair": "email",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "email",
+      "n": 36,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "email",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "email",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "email",
+      "n": 6,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "email",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000393157825
+    },
+    {
+      "pair": "email",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "email",
+      "n": 11,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004160000025876798
+    },
+    {
+      "pair": "email",
+      "n": 13,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041599999531172216
+    },
+    {
+      "pair": "email",
+      "n": 15,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00041700000292621553
+    },
+    {
+      "pair": "email",
+      "n": 16,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "email",
+      "n": 18,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999956502579
+    },
+    {
+      "pair": "email",
+      "n": 20,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999949783087
+    },
+    {
+      "pair": "email",
+      "n": 22,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005420000015874393
+    },
+    {
+      "pair": "email",
+      "n": 23,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005420000015874393
+    },
+    {
+      "pair": "email",
+      "n": 25,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999949783087
+    },
+    {
+      "pair": "email",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004999999946448952
+    },
+    {
+      "pair": "email",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004999999946448952
+    },
+    {
+      "pair": "email",
+      "n": 31,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "email",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "email",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "email",
+      "n": 36,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "email",
+      "n": 89,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007499999992433004
+    },
+    {
+      "pair": "email",
+      "n": 220,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0014169999994919635
+    },
+    {
+      "pair": "email",
+      "n": 543,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0028329999986453913
+    },
+    {
+      "pair": "email",
+      "n": 1342,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.006374999997206032
+    },
+    {
+      "pair": "email",
+      "n": 3315,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.016208999993978068
+    },
+    {
+      "pair": "email",
+      "n": 8190,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.03729100000055041
+    },
+    {
+      "pair": "email",
+      "n": 20237,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.09174999999959255
+    },
+    {
+      "pair": "email",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.22808400000212714
+    },
+    {
+      "pair": "java-class",
+      "n": 2,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.00033399999665562063
+    },
+    {
+      "pair": "java-class",
+      "n": 4,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "java-class",
+      "n": 7,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "java-class",
+      "n": 9,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0006250000005820766
+    },
+    {
+      "pair": "java-class",
+      "n": 11,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0010000000038417056
+    },
+    {
+      "pair": "java-class",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.003166999995301012
+    },
+    {
+      "pair": "java-class",
+      "n": 16,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.007917000002635177
+    },
+    {
+      "pair": "java-class",
+      "n": 18,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.01995800000440795
+    },
+    {
+      "pair": "java-class",
+      "n": 21,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0887910000019474
+    },
+    {
+      "pair": "java-class",
+      "n": 23,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.21883299999899464
+    },
+    {
+      "pair": "java-class",
+      "n": 25,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.6107499999998254
+    },
+    {
+      "pair": "java-class",
+      "n": 27,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.5060410000005504
+    },
+    {
+      "pair": "java-class",
+      "n": 30,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 6.368500000004133
+    },
+    {
+      "pair": "java-class",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 16.862166999999317
+    },
+    {
+      "pair": "java-class",
+      "n": 34,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 44.10275000000547
+    },
+    {
+      "pair": "java-class",
+      "n": 37,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 186.1442920000045
+    },
+    {
+      "pair": "java-class",
+      "n": 39,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 488.1265409999978
+    },
+    {
+      "pair": "java-class",
+      "n": 41,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1274.7097919999942
+    },
+    {
+      "pair": "java-class",
+      "n": 44,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "java-class",
+      "n": 46,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "java-class",
+      "n": 2,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00029200000426499173
+    },
+    {
+      "pair": "java-class",
+      "n": 4,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00029200000426499173
+    },
+    {
+      "pair": "java-class",
+      "n": 7,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033399999665562063
+    },
+    {
+      "pair": "java-class",
+      "n": 9,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033399999665562063
+    },
+    {
+      "pair": "java-class",
+      "n": 11,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "java-class",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "java-class",
+      "n": 16,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004580000022542663
+    },
+    {
+      "pair": "java-class",
+      "n": 18,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000375000003259629
+    },
+    {
+      "pair": "java-class",
+      "n": 21,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "java-class",
+      "n": 23,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999956502579
+    },
+    {
+      "pair": "java-class",
+      "n": 25,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005410000012489036
+    },
+    {
+      "pair": "java-class",
+      "n": 27,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004579999949783087
+    },
+    {
+      "pair": "java-class",
+      "n": 30,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004160000025876798
+    },
+    {
+      "pair": "java-class",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004999999946448952
+    },
+    {
+      "pair": "java-class",
+      "n": 34,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "java-class",
+      "n": 37,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005830000009154901
+    },
+    {
+      "pair": "java-class",
+      "n": 39,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "java-class",
+      "n": 41,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "java-class",
+      "n": 44,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "java-class",
+      "n": 46,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "java-class",
+      "n": 110,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007079999995767139
+    },
+    {
+      "pair": "java-class",
+      "n": 264,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001167000002169516
+    },
+    {
+      "pair": "java-class",
+      "n": 633,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0022080000053392723
+    },
+    {
+      "pair": "java-class",
+      "n": 1517,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004708000000391621
+    },
+    {
+      "pair": "java-class",
+      "n": 3634,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.010583000002952758
+    },
+    {
+      "pair": "java-class",
+      "n": 8708,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.02479200000379933
+    },
+    {
+      "pair": "java-class",
+      "n": 20866,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.05983399999968242
+    },
+    {
+      "pair": "java-class",
+      "n": 50000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.1421669999981532
+    },
+    {
+      "pair": "trailing-space",
+      "n": 18,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0009580000041751191
+    },
+    {
+      "pair": "trailing-space",
+      "n": 32,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0021249999990686774
+    },
+    {
+      "pair": "trailing-space",
+      "n": 56,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0056250000052386895
+    },
+    {
+      "pair": "trailing-space",
+      "n": 100,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.016540999997232575
+    },
+    {
+      "pair": "trailing-space",
+      "n": 178,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.05249999999796273
+    },
+    {
+      "pair": "trailing-space",
+      "n": 316,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.15883300000132294
+    },
+    {
+      "pair": "trailing-space",
+      "n": 562,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.5055830000055721
+    },
+    {
+      "pair": "trailing-space",
+      "n": 1000,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1.657082999998238
+    },
+    {
+      "pair": "trailing-space",
+      "n": 1778,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 5.029334000006202
+    },
+    {
+      "pair": "trailing-space",
+      "n": 3162,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 15.8529170000038
+    },
+    {
+      "pair": "trailing-space",
+      "n": 5623,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 50.20445800000016
+    },
+    {
+      "pair": "trailing-space",
+      "n": 10000,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 157.3171250000014
+    },
+    {
+      "pair": "trailing-space",
+      "n": 17783,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 498.67349999999715
+    },
+    {
+      "pair": "trailing-space",
+      "n": 31623,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1574.1906669999953
+    },
+    {
+      "pair": "trailing-space",
+      "n": 56234,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "trailing-space",
+      "n": 100000,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "trailing-space",
+      "n": 18,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "trailing-space",
+      "n": 32,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.000624999993306119
+    },
+    {
+      "pair": "trailing-space",
+      "n": 56,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007919999989098869
+    },
+    {
+      "pair": "trailing-space",
+      "n": 100,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001167000002169516
+    },
+    {
+      "pair": "trailing-space",
+      "n": 178,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001582999997481238
+    },
+    {
+      "pair": "trailing-space",
+      "n": 316,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0025000000023283064
+    },
+    {
+      "pair": "trailing-space",
+      "n": 562,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.004207999998470768
+    },
+    {
+      "pair": "trailing-space",
+      "n": 1000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.008166999999957625
+    },
+    {
+      "pair": "trailing-space",
+      "n": 1778,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.012416000005032402
+    },
+    {
+      "pair": "trailing-space",
+      "n": 3162,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.021709000000555534
+    },
+    {
+      "pair": "trailing-space",
+      "n": 5623,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.038250000005064066
+    },
+    {
+      "pair": "trailing-space",
+      "n": 10000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.06770800000231247
+    },
+    {
+      "pair": "trailing-space",
+      "n": 17783,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.11991700000362471
+    },
+    {
+      "pair": "trailing-space",
+      "n": 31623,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.21512500000244472
+    },
+    {
+      "pair": "trailing-space",
+      "n": 56234,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.3791250000067521
+    },
+    {
+      "pair": "trailing-space",
+      "n": 100000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.6723340000025928
+    },
+    {
+      "pair": "trailing-space",
+      "n": 109051,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.7406250000058208
+    },
+    {
+      "pair": "trailing-space",
+      "n": 118921,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.8132499999992433
+    },
+    {
+      "pair": "trailing-space",
+      "n": 129684,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.8994999999995343
+    },
+    {
+      "pair": "trailing-space",
+      "n": 141421,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.9760410000017146
+    },
+    {
+      "pair": "trailing-space",
+      "n": 154221,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 1.0528340000018943
+    },
+    {
+      "pair": "trailing-space",
+      "n": 168179,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 1.1321670000033919
+    },
+    {
+      "pair": "trailing-space",
+      "n": 183401,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 1.2751659999994445
+    },
+    {
+      "pair": "trailing-space",
+      "n": 200000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 1.3623749999969732
+    },
+    {
+      "pair": "cloudflare",
+      "n": 14,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.002874999998311978
+    },
+    {
+      "pair": "cloudflare",
+      "n": 20,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.006374999997206032
+    },
+    {
+      "pair": "cloudflare",
+      "n": 29,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.0178749999977299
+    },
+    {
+      "pair": "cloudflare",
+      "n": 42,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.046999999998661224
+    },
+    {
+      "pair": "cloudflare",
+      "n": 59,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.1227500000022701
+    },
+    {
+      "pair": "cloudflare",
+      "n": 85,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.34616600000299513
+    },
+    {
+      "pair": "cloudflare",
+      "n": 121,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 0.9681669999990845
+    },
+    {
+      "pair": "cloudflare",
+      "n": 173,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 2.807834000006551
+    },
+    {
+      "pair": "cloudflare",
+      "n": 247,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 8.066874999996799
+    },
+    {
+      "pair": "cloudflare",
+      "n": 353,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 23.070584000000963
+    },
+    {
+      "pair": "cloudflare",
+      "n": 505,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 66.47624999999971
+    },
+    {
+      "pair": "cloudflare",
+      "n": 721,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 190.52945799999725
+    },
+    {
+      "pair": "cloudflare",
+      "n": 1030,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 553.4557090000017
+    },
+    {
+      "pair": "cloudflare",
+      "n": 1471,
+      "kind": "unsafe",
+      "status": "completed",
+      "medianMs": 1615.628708999997
+    },
+    {
+      "pair": "cloudflare",
+      "n": 2100,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "cloudflare",
+      "n": 3000,
+      "kind": "unsafe",
+      "status": "timeout",
+      "medianMs": null
+    },
+    {
+      "pair": "cloudflare",
+      "n": 14,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "cloudflare",
+      "n": 20,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00029200000426499173
+    },
+    {
+      "pair": "cloudflare",
+      "n": 29,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "cloudflare",
+      "n": 42,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000393157825
+    },
+    {
+      "pair": "cloudflare",
+      "n": 59,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "cloudflare",
+      "n": 85,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033400000393157825
+    },
+    {
+      "pair": "cloudflare",
+      "n": 121,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00033399999665562063
+    },
+    {
+      "pair": "cloudflare",
+      "n": 173,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003329999963170849
+    },
+    {
+      "pair": "cloudflare",
+      "n": 247,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0002919999969890341
+    },
+    {
+      "pair": "cloudflare",
+      "n": 353,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003330000035930425
+    },
+    {
+      "pair": "cloudflare",
+      "n": 505,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003330000035930425
+    },
+    {
+      "pair": "cloudflare",
+      "n": 721,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0003749999959836714
+    },
+    {
+      "pair": "cloudflare",
+      "n": 1030,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999956502579
+    },
+    {
+      "pair": "cloudflare",
+      "n": 1471,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004160000025876798
+    },
+    {
+      "pair": "cloudflare",
+      "n": 2100,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.00045900000259280205
+    },
+    {
+      "pair": "cloudflare",
+      "n": 3000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0004169999956502579
+    },
+    {
+      "pair": "cloudflare",
+      "n": 4650,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005000000019208528
+    },
+    {
+      "pair": "cloudflare",
+      "n": 7208,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0005830000009154901
+    },
+    {
+      "pair": "cloudflare",
+      "n": 11174,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007499999919673428
+    },
+    {
+      "pair": "cloudflare",
+      "n": 17321,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0007919999916339293
+    },
+    {
+      "pair": "cloudflare",
+      "n": 26849,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0008749999979045242
+    },
+    {
+      "pair": "cloudflare",
+      "n": 41618,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.0011669999948935583
+    },
+    {
+      "pair": "cloudflare",
+      "n": 64512,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.001791999995475635
+    },
+    {
+      "pair": "cloudflare",
+      "n": 100000,
+      "kind": "safe",
+      "status": "completed",
+      "medianMs": 0.002749999999650754
+    }
+  ]
+}
