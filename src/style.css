@@ -517,3 +517,98 @@ footer {
   font-family: var(--mono);
   font-size: 12px;
 }
+
+/* --- Проверка языковой моделью --- */
+
+button:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+
+.llm-loading {
+  grid-column: 1 / -1;
+  padding: 18px 16px 16px;
+}
+
+/* Неопределённый прогресс: полоска бегает слева направо */
+.llm-bar {
+  position: relative;
+  height: 3px;
+  overflow: hidden;
+  background: var(--rule);
+}
+
+.llm-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  background: var(--ink);
+  animation: llm-slide 1.3s ease-in-out infinite;
+}
+
+@keyframes llm-slide {
+  from {
+    left: -35%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.llm-status {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.llm-status::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  margin-left: 6px;
+  vertical-align: -1px;
+  background: var(--ink-soft);
+  animation: llm-blink 1s steps(1) infinite;
+}
+
+@keyframes llm-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .llm-bar::after,
+  .llm-status::after {
+    animation: none;
+  }
+
+  .llm-bar::after {
+    left: 0;
+    width: 100%;
+    opacity: 0.4;
+  }
+}
+
+.llm-reason {
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+.result.llm-error {
+  grid-column: 1 / -1;
+  border-left: 3px solid var(--unsafe);
+  background: rgba(168, 50, 42, 0.05);
+}
+
+.result.llm-error .result-label {
+  color: var(--unsafe);
+}
+
+.llm-reason code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 4px;
+}

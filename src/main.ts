@@ -2,6 +2,7 @@ import { PATTERN_PAIRS, getPair } from "./patterns";
 import { runMatch, runSeries, type SeriesPoint } from "./bench/runner";
 import { seriesLengths } from "./lengths";
 import { detect } from "./detector";
+import { llmCheck } from "./llm";
 import { renderChart } from "./chart";
 import { baseline, baselinePoints } from "./baseline";
 import { initRuns, showRunsChart } from "./runs";
@@ -238,4 +239,67 @@ $<HTMLButtonElement>("#run-detect").addEventListener("click", async () => {
       <div class="muted small">атака: ${r.attackString ? JSON.stringify(r.attackString) : "—"}</div>
       ${r.error ? `<div class="muted small">ошибка: ${r.error}</div>` : ""}
     </div>`;
+});
+
+// --- Проверка языковой моделью ---
+const llmForm = $<HTMLFormElement>("#llm-form");
+const llmSource = $<HTMLInputElement>("#llm-source");
+const llmButton = $<HTMLButtonElement>("#run-llm");
+const llmResult = $<HTMLDivElement>("#llm-result");
+
+const el = (tag: string, cls: string, text = ""): HTMLElement => {
+  const node = document.createElement(tag);
+  node.className = cls;
+  node.textContent = text; // ответ модели вставляем только как текст
+  return node;
+};
+
+/** Текст ответа модели: `код` превращаем в <code>, формулы $…$ — в обычный текст. */
+const richText = (cls: string, text: string): HTMLElement => {
+  const node = el("div", cls);
+  text.replace(/\$([^$]+)\$/g, "$1").split(/`([^`]+)`/).forEach((part, i) => {
+    node.append(i % 2 ? el("code", "", part) : document.createTextNode(part));
+  });
+  return node;
+};
+
+llmForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const source = llmSource.value;
+  llmButton.disabled = true;
+  llmSource.disabled = true;
+  llmResult.hidden = false;
+
+  const loader = el("div", "llm-loading");
+  const bar = el("div", "llm-bar");
+  const status = el("div", "llm-status muted", "Модель анализирует паттерн… 0 с");
+  loader.append(bar, status);
+  llmResult.replaceChildren(loader);
+  const started = performance.now();
+  const ticker = setInterval(() => {
+    const s = Math.floor((performance.now() - started) / 1000);
+    status.textContent = `Модель анализирует паттерн… ${s} с`;
+  }, 250);
+
+  try {
+    const r = await llmCheck(source);
+    const cls = r.vulnerable === true ? "unsafe" : r.vulnerable === false ? "safe" : "note";
+    const verdict = r.vulnerable === true ? "УЯЗВИМ" : r.vulnerable === false ? "БЕЗОПАСЕН" : "НЕЯСНО";
+    const head = el("div", `result ${cls}`);
+    head.append(el("div", "result-label", `вердикт для /${source}/`), el("div", "result-time", verdict));
+    const note = el("div", "result note");
+    note.append(richText("llm-reason", r.reason));
+    llmResult.replaceChildren(head, note);
+  } catch (e) {
+    const err = el("div", "result llm-error");
+    err.append(
+      el("div", "result-label", "ошибка"),
+      el("div", "llm-reason", e instanceof Error ? e.message : String(e)),
+    );
+    llmResult.replaceChildren(err);
+  } finally {
+    clearInterval(ticker);
+    llmButton.disabled = false;
+    llmSource.disabled = false;
+  }
 });

@@ -175,6 +175,25 @@
         </ul>
       </section>
 
+      <section id="llm" class="card">
+        <h2>7. Проверка языковой моделью</h2>
+        <p class="muted">
+          Тот же вопрос, что и в разделе 4, но задаётся LLM: паттерн уходит на
+          сервер, модель (Gemini, при сбое — Groq) ищет вложенные и неоднозначные
+          квантификаторы и объясняет вердикт словами. В отличие от
+          <code>recheck</code>, это не анализ автомата, а мнение модели — оно
+          может ошибаться. Лимит: 5 запросов в минуту.
+        </p>
+        <form id="llm-form" class="controls">
+          <label class="grow">
+            Регулярное выражение (без слэшей)
+            <input id="llm-source" type="text" value="^(a|aa)+$" required />
+          </label>
+          <button id="run-llm" type="submit" class="primary">Спросить модель</button>
+        </form>
+        <div id="llm-result" class="result-grid" hidden></div>
+      </section>
+
       <section id="notes" class="notes">
         <h2>Примечания</h2>
         <ol>
