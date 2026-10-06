@@ -58,7 +58,7 @@ const benchMaxSafe = $<HTMLInputElement>("#bench-max-safe");
 
 const GROUPS: { growth: "exponential" | "polynomial"; label: string }[] = [
   { growth: "exponential", label: "Экспоненциальный рост" },
-  { growth: "polynomial", label: "Полиномиальный рост (реальные инциденты)" },
+  { growth: "polynomial", label: "Полиномиальный рост" },
 ];
 for (const group of GROUPS) {
   const optgroup = document.createElement("optgroup");
@@ -122,8 +122,8 @@ $<HTMLButtonElement>("#run-single").addEventListener("click", async () => {
   const cell = (label: string, o: typeof unsafe, cls: string) => `
     <div class="result ${cls}">
       <div class="result-label">${label}</div>
-      <div class="result-time">${o.status === "timeout" ? `> ${timeoutMs} мс (таймаут)` : fmtMs(o.medianMs)}</div>
-      <div class="muted small">${o.status === "timeout" ? "поток был бы заблокирован" : `matched: ${o.matched}`}</div>
+      <div class="result-time">${o.status === "timeout" ? `Таймаут ${timeoutMs} мс` : fmtMs(o.medianMs)}</div>
+      <div class="muted small">${o.status === "timeout" ? "Превышено время ожидания результата" : o.matched ? "Совпадение найдено" : "Совпадение отсутствует"}</div>
     </div>`;
   singleResult.innerHTML = cell(`unsafe /${pair.unsafeSource}/`, unsafe, "unsafe") +
     cell(`safe /${pair.safeSource}/`, safe, "safe") +
@@ -145,15 +145,15 @@ function showChart(): void {
   if (live) {
     renderChart(benchChart, live.points, live.timeoutMs);
     benchSource.textContent =
-      `Живой прогон в этом браузере, ${fmtDate(live.at)}. Таймаут ${live.timeoutMs} мс.`;
+      `Измерения в текущем браузере, ${fmtDate(live.at)}. Таймаут ${live.timeoutMs} мс.`;
     return;
   }
   renderChart(benchChart, baselinePoints(pair.id), baseline.timeoutMs);
   const { cpu, node, platform } = baseline.env;
   benchSource.textContent =
-    `Снимок из npm run bench:node: ${cpu}, Node ${node} (${platform}), ` +
+    `Сохранённые измерения Node.js: ${cpu}, Node ${node} (${platform}), ` +
     `${fmtDate(new Date(baseline.timestamp))}. Таймаут ${baseline.timeoutMs} мс. ` +
-    `Кнопка выше перемерит то же самое в вашем браузере.`;
+    `Повторное измерение в браузере выполняется кнопкой «Выполнить серию измерений».`;
 }
 
 $<HTMLButtonElement>("#run-bench").addEventListener("click", async () => {
@@ -174,7 +174,7 @@ $<HTMLButtonElement>("#run-bench").addEventListener("click", async () => {
       benchProgress.textContent = `Прогресс: ${done}/${total} (${label})`;
     },
   });
-  benchProgress.textContent = `Готово. Точек: ${points.length}. Таймаутов unsafe: ${points.filter((p) => p.unsafe.status === "timeout").length}.`;
+  benchProgress.textContent = `Измерения завершены. Точек: ${points.length}. Таймаутов unsafe: ${points.filter((p) => p.unsafe.status === "timeout").length}.`;
   liveRuns.set(pair.id, { points, timeoutMs, at: new Date() });
   showChart();
 });
@@ -192,7 +192,7 @@ const blockWorkerStatus = $<HTMLParagraphElement>("#block-worker-status");
 $<HTMLButtonElement>("#block-main").addEventListener("click", () => {
   const pair = currentPair();
   const input = pair.attack(pair.blockN);
-  blockMainStatus.textContent = `Запуск в main thread (n=${pair.blockN})… спиннер замрёт.`;
+  blockMainStatus.textContent = `Выполнение в основном потоке (n=${pair.blockN}). Обновление индикаторов будет приостановлено.`;
   // Даём браузеру отрисовать статус перед блокирующим вызовом.
   setTimeout(() => {
     const re = new RegExp(pair.unsafeSource, pair.flags);
@@ -202,22 +202,22 @@ $<HTMLButtonElement>("#block-main").addEventListener("click", () => {
     const start = performance.now();
     re.test(input); // синхронно блокирует main thread
     const elapsed = performance.now() - start;
-    blockMainStatus.textContent = `Main thread был заблокирован ${elapsed.toFixed(0)} мс — всё это время страница не отвечала.`;
+    blockMainStatus.textContent = `Продолжительность блокировки основного потока: ${elapsed.toFixed(0)} мс.`;
   }, 50);
 });
 
 $<HTMLButtonElement>("#block-worker").addEventListener("click", async () => {
   const pair = currentPair();
   const input = pair.attack(pair.blockN);
-  blockWorkerStatus.textContent = `Запуск в воркере (n=${pair.blockN})… спиннер продолжает крутиться.`;
+  blockWorkerStatus.textContent = `Выполнение в Web Worker (n=${pair.blockN}). Основной поток доступен для обработки событий.`;
   const outcome = await runMatch(pair.unsafeSource, pair.flags, input, {
     timeoutMs: 10000,
     repeats: 1,
   });
   blockWorkerStatus.textContent =
     outcome.status === "timeout"
-      ? "Воркер превысил таймаут и был завершён — UI всё это время оставался живым."
-      : `Готово за ${fmtMs(outcome.medianMs)}; UI ни на миг не замирал.`;
+      ? "Воркер завершён по таймауту. Вычисления выполнялись вне основного потока."
+      : `Время выполнения в отдельном потоке: ${fmtMs(outcome.medianMs)}.`;
 });
 
 // --- Детектор ---
@@ -231,13 +231,13 @@ $<HTMLButtonElement>("#run-detect").addEventListener("click", async () => {
     r.status === "vulnerable" ? "unsafe" : r.status === "safe" ? "safe" : "note";
   detectResult.innerHTML = `
     <div class="result ${badge}">
-      <div class="result-label">вердикт</div>
+      <div class="result-label">Результат анализа</div>
       <div class="result-time">${r.status.toUpperCase()}</div>
     </div>
     <div class="result note">
-      <div class="muted small">сложность: ${r.complexity ?? "—"}</div>
-      <div class="muted small">атака: ${r.attackString ? JSON.stringify(r.attackString) : "—"}</div>
-      ${r.error ? `<div class="muted small">ошибка: ${r.error}</div>` : ""}
+      <div class="muted small">Оценка сложности: ${r.complexity ?? "—"}</div>
+      <div class="muted small">Атакующая строка: ${r.attackString ? JSON.stringify(r.attackString) : "—"}</div>
+      ${r.error ? `<div class="muted small">Ошибка анализа: ${r.error}</div>` : ""}
     </div>`;
 });
 
