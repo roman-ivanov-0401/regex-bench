@@ -90,9 +90,9 @@ function findings(): string[] {
   );
   out.push(
     `${runs.length} среды, ${PATTERN_PAIRS.length} пар паттернов: ${fmtInt(measured)} замеров и ${timeouts} таймаутов, ` +
-      `общее время прогонов — ${fmtDuration(total)}. ` +
-      (allTimedOut ? `Каждый unsafe-паттерн в каждой среде дошёл до таймаута ${fmtMs(runs[0].timeoutMs)}, ` : "") +
-      `а самый медленный замер safe — ${fmtMs(slowestSafe)}.`,
+      `общая длительность экспериментов — ${fmtDuration(total)}. ` +
+      (allTimedOut ? `Для каждого уязвимого выражения в каждой среде зарегистрирован таймаут ${fmtMs(runs[0].timeoutMs)}, ` : "") +
+      `максимальная медиана safe — ${fmtMs(slowestSafe)}.`,
   );
 
   if (local && docker) {
@@ -113,8 +113,8 @@ function findings(): string[] {
       out.push(
         `Пик памяти контейнера — ${fmtMb(docker.memoryPeakBytes)} из ${fmtMb(docker.limits.memoryBytes)} (${share}% лимита). ` +
           (docker.jsHeapUsedBytes
-            ? `Это не регулярки: JS-куча страницы после прогона — ${fmtMb(docker.jsHeapUsedBytes)}, остальное занимают браузер, Vite и Playwright.`
-            : `Почти всё это — браузер, Vite и Playwright.`),
+            ? `JS-куча страницы после эксперимента — ${fmtMb(docker.jsHeapUsedBytes)}. Пик контейнера включает также браузер, воркеры, Vite и Playwright.`
+            : `В показатель входят браузер, воркеры, Vite и Playwright.`),
       );
     }
     if (local.mainThreadTaskSec && docker.mainThreadTaskSec) {
@@ -122,7 +122,7 @@ function findings(): string[] {
       out.push(
         `Главный поток страницы в контейнере был занят в ${k.toFixed(1)} раза дольше (` +
           `${docker.mainThreadTaskSec.toFixed(1)} с против ${local.mainThreadTaskSec.toFixed(1)} с по CDP TaskDuration): ` +
-          `скорее всего, потому что на одном ядре он делит процессор с воркерами, которые крутят регулярки.`,
+          `это суммарное время задач страницы, а не длительность одной проверки регулярного выражения.`,
       );
     }
   }
@@ -135,10 +135,8 @@ function findings(): string[] {
       return a && b && (a / b > 1.5 || b / a > 1.5);
     });
     out.push(
-      `Node и Chromium дают близкие цифры — в обоих V8` +
-        (diverged.length
-          ? `, кроме ${diverged.length === 1 ? "пары" : "пар"} «${diverged.map((p) => p.title).join("», «")}»: версии V8 разные (${node.engine.split(", ")[1]} в Node и та, что в ${local.engine}), и оптимизации регулярок у них отличаются.`
-          : "."),
+      `У ${diverged.length} из ${PATTERN_PAIRS.length} пар время в Node и Chromium отличается больше чем в 1,5 раза. ` +
+      `Данные получены в одном эксперименте на указанных версиях движка и не позволяют раздельно оценить влияние JIT-компиляции и фоновой нагрузки.`,
     );
   }
   return out;
@@ -192,7 +190,7 @@ function envTable(): string {
       "Замеров / таймаутов",
       (r) => `${r.series.filter((x) => x.medianMs !== null).length} / ${r.series.filter((x) => x.status === "timeout").length}`,
     ],
-    ["Когда", (r) => fmtDate(r.timestamp)],
+    ["Дата измерения", (r) => fmtDate(r.timestamp)],
   ];
   return (
     `<thead><tr><th></th>${runs.map((r) => `<th>${r.title}</th>`).join("")}</tr></thead>` +
@@ -205,7 +203,7 @@ function pairsTable(): string {
   const head =
     `<thead><tr><th>Пара</th><th class="num">n</th>` +
     runs.map((r) => `<th class="num">${SHORT[r.id]}</th>`).join("") +
-    `<th class="num">safe</th><th class="num">разница</th>` +
+    `<th class="num">safe</th><th class="num">Отношение времён</th>` +
     (node?.throughput ? `<th class="num">safe, оп/с</th>` : "") +
     `</tr></thead>`;
 
@@ -236,7 +234,7 @@ export function initRuns(): void {
   if (!section) return;
   if (!runs.length) {
     section.querySelector("#runs-findings")!.innerHTML =
-      `<li>Снимок пуст: запустите <code>npm run bench:all</code>.</li>`;
+      `<li>Сохранённые результаты отсутствуют. Команда сбора данных: <code>npm run bench:all</code>.</li>`;
     return;
   }
   section.querySelector("#runs-findings")!.innerHTML = findings().map((f) => `<li>${f}</li>`).join("");
@@ -253,6 +251,6 @@ export function showRunsChart(pairId: string): void {
     runs.map((r) => ({ label: SHORT[r.id], points: rowsToPoints(r.series, pairId) })),
   );
   caption.textContent =
-    `Пара «${getPair(pairId).title}» — выбирается в песочнице выше. ` +
+    `Пара «${getPair(pairId).title}» — выбор задаётся в разделе 1. ` +
     `Сплошная линия — Node, штрих — Chromium, точки — Docker; кривая unsafe обрывается на первом таймауте.`;
 }
